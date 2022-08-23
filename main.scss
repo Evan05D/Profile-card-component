@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+$fontStack: 'Kumbh Sans', sans-serif;
+$darkCyan: hsl(185, 75%, 39%);
+$veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+$darkGrayishBlue: hsl(227, 10%, 46%);
+$darkGray: hsl(0, 0%, 59%);
+$white: rgb(241, 241, 241);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 375px;
+    margin: 0 auto;
+    background-color: $darkCyan;
+    font-family: $fontStack;
+}
+
+.img-bg-top {
+    background-image: url(./images/bg-pattern-top.svg);
+    width: 230px;
+    height: 380px;
+    position: absolute;
+    transform: rotate(180deg);
+    top: -50px;
+    left: 0px;
+}
+
+.img-bg-bot {
+    background-image: url(./images/bg-pattern-bottom.svg);
+    width: 230px;
+    height: 390px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+#main-container {
+    width: 330px;
+    height: 365px;
+    background-color: $white;
+    z-index: 10;
+    border-radius: 16px;
+    .img-bg-main {
+        background-image: url(./images/bg-pattern-card.svg);
+        width: 330px;
+        height: 133px;
+        position: absolute;
+        border-radius: 16px 16px 0 0;
+    }
+    .img-bg-profile {
+        background-image: url(./images/image-victor.jpg);
+        background-repeat: no-repeat;
+        border: 5px solid #fff;
+        width: 105px;
+        height: 105px;
+        border-radius: 50%;
+        position: absolute;
+        margin: 80px 0 0 108px;
+        z-index: 11;
+    }
+    .name-age {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 12.5em;
+        z-index: 20;
+        h1 {
+            font-size: 18px;
+            font-weight: 700;
+            color: $veryDarkDesaturatedBlue;
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0 0 0 10px;
+            color: $darkGrayishBlue;
+        }
+    }
+    p {
+        font-size: 14px;
+        color: $darkGrayishBlue;
+        font-weight: 400;
+        text-align: center;
+        margin: 8px 0 20px 0;
+    }
+    hr {
+        border-color: rgba(150, 150, 150, .3);
+        border-style: solid none none;
+        
+    }
+    .follo-main {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin: 25px 0 0 0;
+        strong {
+            color: $veryDarkDesaturatedBlue;
+            font-weight: 700;
+        }
+        p {
+            font-size: 11px;
+            color: $darkGray;
+            font-weight: 700;
+        }
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    margin: 20px 0 0 0;
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 100%, 30%); 
+}
+
+@media screen and (min-width: 1440px) {
+    .img-bg-top {
+        background-image: url(./images/bg-pattern-top.svg);
+        width: 680px;
+        height: 380px;
+        position: absolute;
+        transform: rotate(180deg);
+        top: 0px;
+        left: 0px;
+    }
+    
+    .img-bg-bot {
+        background-image: url(./images/bg-pattern-bottom.svg);
+        width: 700px;
+        height: 330px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+}
